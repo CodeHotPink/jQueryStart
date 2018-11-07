@@ -61,10 +61,17 @@
     // const revenueMessage;
 
     function makeCoffee(event) {
-      coffeeImage.setAttribute('src', './static/coffee_mug.jpg');
+      function showCoffeeMug(event){
+        setTimeout(coffeeImage.setAttribute('src', './static/coffee_mug.jpg'), 2500);
+        }
+
+      setTimeout(showCoffeeMug, 1500);
+      coffeeImage.setAttribute('src', './static/coffee_machine.jpg');
+
+      setTimeout(e => coffeeImage.setAttribute('src', './static/coffee_beans.jpg'), 3000);
     }
 
-    coffeeImage.addEventListener('click', makeCoffee)
+    coffeeImage.addEventListener('click', makeCoffee);
 
     // use this JavaScript object in further study step
 
