@@ -72,16 +72,23 @@
     // }
 
     // coffeeImage.addEventListener('click', makeCoffee);
-    const coffeeImage = document.querySelector('#coffee-image');
+    const orderHistory = []
     $('#coffee-image').attr('src', './static/coffee_beans.jpg');
-    function makeCoffee (event) {
+    function makeCoffee (event, drinkType) {
       setTimeout(e => $('#coffee-image').attr('src', './static/coffee_machine.jpg'), 1500);
       setTimeout(e => $('#coffee-image').attr('src', './static/coffee_mug.jpg'), 2500);
       setTimeout(e => $('#coffee-image').attr('src', './static/coffee_beans.jpg'), 5000)
+
+      brew => {
+        $('#coffee-image').on('click', makeCoffee);
+        orderHistory.push('brew');
+        console.log(orderHistory)
+      }
+
       // body...
     }
 
-    $('#coffee-image').on('click', makeCoffee);
+
 
 
     // use this JavaScript object in further study step
