@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Hackbright Coffee Shop</title>
-
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <!-- Bootstrap links -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -55,23 +55,34 @@
 
     // Set these variables to their DOM elements
 
+    // const coffeeImage = document.querySelector('#coffee-image');
+    // coffeeImage.setAttribute('src', './static/coffee_beans.jpg');
+
+    // // const revenueMessage;
+
+    // function makeCoffee(event) {
+    //   function showCoffeeMug(event){
+    //     setTimeout(coffeeImage.setAttribute('src', './static/coffee_mug.jpg'), 2500);
+    //     }
+
+    //   setTimeout(showCoffeeMug, 1500);
+    //   coffeeImage.setAttribute('src', './static/coffee_machine.jpg');
+
+    //   setTimeout(e => coffeeImage.setAttribute('src', './static/coffee_beans.jpg'), 3000);
+    // }
+
+    // coffeeImage.addEventListener('click', makeCoffee);
     const coffeeImage = document.querySelector('#coffee-image');
-    coffeeImage.setAttribute('src', './static/coffee_beans.jpg');
-
-    // const revenueMessage;
-
-    function makeCoffee(event) {
-      function showCoffeeMug(event){
-        setTimeout(coffeeImage.setAttribute('src', './static/coffee_mug.jpg'), 2500);
-        }
-
-      setTimeout(showCoffeeMug, 1500);
-      coffeeImage.setAttribute('src', './static/coffee_machine.jpg');
-
-      setTimeout(e => coffeeImage.setAttribute('src', './static/coffee_beans.jpg'), 3000);
+    $('#coffee-image').attr('src', './static/coffee_beans.jpg');
+    function makeCoffee (event) {
+      setTimeout(e => $('#coffee-image').attr('src', './static/coffee_machine.jpg'), 1500);
+      setTimeout(e => $('#coffee-image').attr('src', './static/coffee_mug.jpg'), 2500);
+      setTimeout(e => $('#coffee-image').attr('src', './static/coffee_beans.jpg'), 5000)
+      // body...
     }
 
-    coffeeImage.addEventListener('click', makeCoffee);
+    $('#coffee-image').on('click', makeCoffee);
+
 
     // use this JavaScript object in further study step
 
