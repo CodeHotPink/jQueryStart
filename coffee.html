@@ -58,7 +58,13 @@
     const coffeeImage = document.querySelector('#coffee-image');
     coffeeImage.setAttribute('src', './static/coffee_beans.jpg');
 
-    const revenueMessage;
+    // const revenueMessage;
+
+    function makeCoffee(event) {
+      coffeeImage.setAttribute('src', './static/coffee_mug.jpg');
+    }
+
+    coffeeImage.addEventListener('click', makeCoffee)
 
     // use this JavaScript object in further study step
 
