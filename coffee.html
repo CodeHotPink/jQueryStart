@@ -16,7 +16,7 @@
     <div class="starter-template">
       <h1>Coffee Shop</h1>
 
-      <img
+      <img src="./static/coffee_beans.jpg"
         id="coffee-image"
         alt="make this image work with js"
         height="300"
@@ -55,7 +55,9 @@
 
     // Set these variables to their DOM elements
 
-    const coffeeImage;
+    const coffeeImage = document.querySelector('#coffee-image');
+    coffeeImage.setAttribute('src', './static/coffee_beans.jpg');
+
     const revenueMessage;
 
     // use this JavaScript object in further study step
